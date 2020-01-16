@@ -39,8 +39,6 @@ def notice(word):
     thd.daemon=True
     thd.start()
     
-
-
 # test
 if __name__=="__main__":
     print(think('hello'))

@@ -25,3 +25,16 @@ def learning(word):
         Brain.talker.emit(f'我学会怎么回答“{word}”了')
         Brain.auto_listen_mode=True
         word_consider.think_mode=1
+
+class symbol():
+
+    def __init__(self,word):
+        self.value=word
+        self.tag=['文字']
+
+    def __add__(self,other):
+        new_word=self.value+other.value
+        return symbol(new_word)
+
+    def __str__(self):
+        return self.value

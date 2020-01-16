@@ -10,11 +10,14 @@
 import pickle,os
 
 normal_word={'你是谁':'我是罗伯特'}
-model={'normal':normal_word}
+word_symbol=[]
+model={'normal':normal_word,'word_symbol':word_symbol}
+
 
 if os.path.isfile('memory.pkl'):
     with open('./memory.pkl','rb') as f:
         normal_word,model=pickle.load(f)
+        word_symbol=model['word_symbol']
 
 def model_save():
     global normal_word, model
